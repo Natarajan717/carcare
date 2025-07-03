@@ -19,7 +19,7 @@ public class ReminderScheduler {
         this.emailService = emailService;
     }
 
-     @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "0 0 10 * * *", zone = "Asia/Kolkata")
     public void checkExpiries() {
         List<Car> cars = carService.getCarsWithUpcomingExpiries();
 
