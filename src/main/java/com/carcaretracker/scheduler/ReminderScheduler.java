@@ -19,7 +19,7 @@ public class ReminderScheduler {
         this.emailService = emailService;
     }
 
-    @Scheduled(cron = "0 0 13 * * *") // Every day at 9 AM
+     @Scheduled(cron = "0 * * * * *")/ Every day at 9 AM
     public void checkExpiries() {
         List<Car> cars = carService.getCarsWithUpcomingExpiries();
 
